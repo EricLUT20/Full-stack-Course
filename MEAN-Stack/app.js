@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, "public")))
 
 app.use(bodyParser.json())
 
-//Initializing express-session middleware
+//Initializing express-session middleware NOT NEEDED IF USING NODE V 12
 app.use(
   require("express-session")({
     secret: config.secret,
@@ -57,6 +57,6 @@ app.get("/", (req, res) => {
   res.send("Invalid")
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server started on port " + port)
 })
