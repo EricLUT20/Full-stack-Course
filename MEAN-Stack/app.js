@@ -26,7 +26,7 @@ const app = express()
 const users = require("./routes/users")
 
 //Port
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 3000
 
 app.use(cors())
 
