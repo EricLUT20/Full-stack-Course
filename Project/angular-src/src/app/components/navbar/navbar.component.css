@@ -1,0 +1,29 @@
+.custom-navbar form {
+  margin-top: 8px; /* Adjust the margin as needed */
+}
+
+.custom-navbar input {
+  width: 200px; /* Set the width of the input field as needed */
+}
+/* styles.css (or styles.scss) */
+
+.custom-navbar form {
+  margin-top: 7px; /* Adjust the margin as needed */
+}
+
+.custom-navbar input {
+  width: 200px; /* Set the width of the input field as needed */
+  background-color: transparent; /* Set initial background color to transparent */
+  border: none; /* Remove the border */
+  color: #ffffff; /* Set the text color to white */
+}
+
+.custom-navbar input::placeholder {
+  color: #98968b; /* Set the placeholder text color to white */
+}
+
+.custom-navbar input:focus {
+  background-color: #ffffff; /* Set the background color to white when in focus */
+  color: #000000; /* Set the text color to black when in focus */
+  outline: none; /* Remove the focus outline (optional) */
+}
