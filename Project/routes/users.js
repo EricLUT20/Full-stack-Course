@@ -70,4 +70,17 @@ router.get(
   }
 )
 
+// Search User
+router.get("/search/:username", async (req, res, next) => {
+  try {
+    const user = await User.getUserByUsername(req.params.username)
+    const userDetails = {
+      username: user.username,
+    }
+    res.json(userDetails)
+  } catch (err) {
+    throw err
+  }
+})
+
 module.exports = router

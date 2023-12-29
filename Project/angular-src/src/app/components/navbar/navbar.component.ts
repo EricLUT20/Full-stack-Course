@@ -26,4 +26,10 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(["/login"]);
     return false;
   }
+
+  search: string = "";
+
+  onSearch() {
+    console.log("Searching for:", this.search);
+  }
 }
