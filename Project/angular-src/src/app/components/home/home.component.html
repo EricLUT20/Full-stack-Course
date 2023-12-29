@@ -3,12 +3,11 @@
   <br />
   <!-- User logged out-->
   <div *ngIf="!authService.loggedIn()">
-    <div>
+    <div class="jumbotron">
       <p class="lead">Register as a new user.</p>
       <a class="btn btn-primary" [routerLink]="['/register']">Register</a>
     </div>
-    <br />
-    <div>
+    <div class="jumbotron">
       <p class="lead">Already have an account?</p>
       <a class="btn btn-default" [routerLink]="['/login']">Login</a>
     </div>
@@ -16,16 +15,19 @@
 
   <!-- User logged in -->
   <div *ngIf="authService.loggedIn()">
-    <div>
+    <div class="jumbotron">
       <p class="lead" *ngIf="user">
         Welcome, you have logged in as {{ user.name }}
       </p>
       <p class=""></p>
+      <a class="btn btn-default" [routerLink]="['/profile']">Your Profile</a>
+    </div>
+    <div class="jumbotron">
+      <p class="lead">View other users' posts</p>
       <a class="btn btn-default" [routerLink]="['/dashboard']">Dashboard</a>
     </div>
-    <br />
-    <div>
-      <p class="lead">Logout</p>
+    <div class="jumbotron">
+      <p class="lead">Wrong account?</p>
       <a class="btn btn-default" (click)="authService.logout()">Logout</a>
     </div>
   </div>
