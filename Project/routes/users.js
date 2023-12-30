@@ -74,7 +74,15 @@ router.get(
 router.get("/search/:username", async (req, res, next) => {
   try {
     const user = await User.getUserByUsername(req.params.username)
+
+    if (!user) {
+      return res.status(404).json({ success: false, msg: "User not found" })
+    }
+
     const userDetails = {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
       username: user.username,
     }
     res.json(userDetails)

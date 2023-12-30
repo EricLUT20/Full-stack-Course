@@ -30,6 +30,6 @@ export class NavbarComponent implements OnInit {
   search: string = "";
 
   onSearch() {
-    console.log("Searching for:", this.search);
+    this.router.navigate(["/search"], { queryParams: { search: this.search } });
   }
 }
