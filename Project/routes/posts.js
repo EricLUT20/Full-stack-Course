@@ -2,10 +2,9 @@ const express = require("express")
 const router = express.Router()
 const Post = require("../models/post")
 const User = require("../models/user")
-const passport = require("passport")
 
 // Create a post
-router.post("/", authenticateUser, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const content = req.body.content
     const userId = req.user._id // Use the authenticated user's ID
