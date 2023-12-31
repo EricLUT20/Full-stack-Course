@@ -25,6 +25,9 @@ const app = express()
 //Users
 const users = require("./routes/users")
 
+//Posts
+const posts = require("./routes/posts")
+
 //Port
 const port = process.env.PORT || 3000
 
@@ -52,6 +55,9 @@ require("./config/passport")(passport)
 
 //Setting /users
 app.use("/users", users)
+
+//Setting /posts
+app.use("/posts", posts)
 
 app.get("/", (req, res) => {
   res.send("Invalid")

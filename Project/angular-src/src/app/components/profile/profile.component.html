@@ -13,14 +13,21 @@
         <strong>Password:</strong> {{ user.password }}
       </li>
     </ul>
-  </div>
-
-  <div class="user-posts">
+    <br />
     <h4>Posts</h4>
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let post of user.posts">
-        {{ post.title }} - {{ post.content }}
-      </li>
-    </ul>
+
+    <!--If user has posts-->
+    <div class="user-posts" *ngIf="posts && posts.length > 0">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let post of posts.reverse()">
+          {{ post.content }}
+        </li>
+      </ul>
+    </div>
+
+    <!--If user has not posts-->
+    <p class="text-center" *ngIf="!posts || posts.length === 0">
+      No posts available
+    </p>
   </div>
 </div>

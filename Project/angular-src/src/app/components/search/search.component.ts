@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
     private http: Http,
   ) {}
 
+  posts: string[];
   username: string;
   user: object | null;
 
@@ -24,6 +25,16 @@ export class SearchComponent implements OnInit {
       this.getUser(username).subscribe(
         (user) => {
           this.user = user !== null ? user : null;
+          this.getPosts(user._id).subscribe(
+            (posts) => {
+              this.posts = posts;
+              console.log(posts);
+            },
+            (err) => {
+              console.log(err);
+              return false;
+            },
+          );
           console.log(this.user);
         },
         (err) => {
@@ -40,6 +51,17 @@ export class SearchComponent implements OnInit {
     headers.append("Content-Type", "application/json");
     return this.http
       .get("http://localhost:3000/users/search/" + username, {
+        headers: headers,
+      })
+      .map((res) => res.json());
+  }
+
+  getPosts(userId: String) {
+    let headers = new Headers();
+    headers.append("Content-Type", "application/json");
+    console.log("http://localhost:3000/posts/" + userId);
+    return this.http
+      .get("http://localhost:3000/posts/" + userId, {
         headers: headers,
       })
       .map((res) => res.json());
