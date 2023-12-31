@@ -1,5 +1,5 @@
 .user-details {
-  background-color: transparent;
+  background-color: #f8f9fa;
   border: 1px solid #d6d8db;
   border-radius: 8px;
   padding: 20px;
@@ -15,24 +15,23 @@
   margin-top: 10px;
 }
 
+.user-posts {
+  margin-top: 20px;
+}
+
 .user-posts h4 {
   color: #3790f0;
   margin-bottom: 10px;
 }
 
 .list-group-item {
-  border: none;
-}
-
-.user-posts {
-  background-color: transparent;
-  border: 0px solid #d6d8db;
-  border-radius: 8px;
-  padding: 20px;
-}
-
-.user-posts .list-group-item {
+  background-color: #ffffff;
   border: 1px solid #d6d8db;
   border-radius: 8px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user-posts .list-group-item:last-child {
+  margin-bottom: 0;
 }

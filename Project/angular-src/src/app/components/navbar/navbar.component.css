@@ -1,32 +1,108 @@
 .custom-navbar {
-  background-color: rgb(50, 50, 50);
+  background-color: #343a40;
+  padding: 10px;
+  border-radius: 0;
+}
+
+.custom-navbar .navbar-brand:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+  border-radius: 4px;
+}
+
+.custom-navbar .navbar-brand {
+  color: #ffffff;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
 }
 
 .custom-navbar form {
   margin-top: 8px;
 }
 
-.custom-navbar input {
-  width: 200px;
-}
-
-.custom-navbar form {
-  margin-top: 7px;
-}
-
-.custom-navbar input {
-  width: 150px;
+.custom-navbar .search-input {
+  width: 175px;
+  border: #ffffff 2px solid;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
   background-color: transparent;
-  border: none;
-  color: #ffffff;
+  margin-right: 5px;
 }
 
-.custom-navbar input::placeholder {
+.custom-navbar .search-input::placeholder {
   color: #98968b;
 }
 
-.custom-navbar input:focus {
+.custom-navbar .search-input:focus,
+.custom-navbar .search-input:not(:placeholder-shown) {
   background-color: #ffffff;
   color: #000000;
   outline: none;
+}
+
+.custom-navbar .search-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.custom-navbar .search-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+  border-radius: 4px;
+}
+
+.custom-navbar .nav.navbar-nav.navbar-right a {
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.custom-navbar .nav.navbar-nav.navbar-right a:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+  border-radius: 4px;
+}
+
+.custom-navbar .nav.navbar-nav.navbar-right .active a {
+  background-color: #ffffff;
+  color: #000000;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+  border-radius: 4px;
+}
+
+.custom-navbar .nav.navbar-nav.navbar-left a {
+  color: #ffffff;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.custom-navbar .nav.navbar-nav.navbar-left a:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+  border-radius: 4px;
+}
+
+.custom-navbar .nav.navbar-nav.navbar-left .active a {
+  background-color: #ffffff;
+  color: #000000;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+  border-radius: 4px;
 }
