@@ -1,0 +1,32 @@
+.user-details {
+  background-color: #f8f9fa;
+  border: 1px solid #d6d8db;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.user-details h4 {
+  color: #3790f0;
+  margin-bottom: 10px;
+}
+
+.list-group {
+  margin-top: 10px;
+}
+
+.user-posts h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.user-posts {
+  background-color: #f8f9fa;
+  border: 1px solid #d6d8db;
+  border-radius: 8px;
+  padding: 20px;
+}
