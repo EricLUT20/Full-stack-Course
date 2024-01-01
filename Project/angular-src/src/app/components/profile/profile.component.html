@@ -16,16 +16,18 @@
     <br />
     <h4>Posts</h4>
 
-    <!--If user has posts-->
+    <!-- If user has posts -->
     <div class="user-posts" *ngIf="posts && posts.length > 0">
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let post of posts.reverse()">
           {{ post.content }}
+          <br />
+          <small>Posted on: {{ post.timestamp | date: "medium" }}</small>
         </li>
       </ul>
     </div>
 
-    <!--If user has not posts-->
+    <!-- If user has no posts -->
     <p class="text-center" *ngIf="!posts || posts.length === 0">
       No posts available
     </p>

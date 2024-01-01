@@ -1,0 +1,56 @@
+.btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #000;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  border: 2px solid #d6d8db;
+  color: #000;
+  transition: all 0.5s;
+}
+
+.post-bar {
+  width: calc(100% - 20px);
+  height: 100px;
+  min-height: 50px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow-y: hidden;
+  transition: height 0.3s;
+  resize: none;
+}
+
+.card-title a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  color: black;
+  transition: color 0.5s;
+}
+
+.card-deck .card {
+  margin-bottom: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.card .card-body {
+  padding: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

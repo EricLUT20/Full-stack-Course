@@ -1,2 +1,30 @@
-<h2 class="page-header">Dashboard</h2>
-<p>Welcome to your dashboard</p>
+<!-- Create post -->
+<div class="create-post-bar">
+  <textarea
+    class="post-bar"
+    id="newPost"
+    placeholder="Write a new post..."
+    [(ngModel)]="textField"
+  ></textarea>
+  <button class="btn btn-primary" (click)="onPost()">Post</button>
+</div>
+
+<!-- Recent posts -->
+<div class="container mt-5">
+  <h2 class="mb-5">Recent Posts</h2>
+  <div class="card-deck">
+    <div *ngFor="let post of posts" class="card">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a
+            [routerLink]="['/search']"
+            [queryParams]="{ search: post.owner.username }"
+            >{{ post.owner.username }}</a
+          >
+        </h5>
+        <p class="card-text">{{ post.content }}</p>
+        <small>Posted on: {{ post.timestamp | date: "medium" }}</small>
+      </div>
+    </div>
+  </div>
+</div>

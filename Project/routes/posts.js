@@ -2,22 +2,29 @@ const express = require("express")
 const router = express.Router()
 const Post = require("../models/post")
 const User = require("../models/user")
+const passport = require("passport")
 
 // Create a post
-router.post("/", async (req, res) => {
-  try {
-    const content = req.body.content
-    const userId = req.user._id // Use the authenticated user's ID
+router.post(
+  "/",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    try {
+      const content = req.body.content
+      const userId = req.body.owner
 
-    const newPost = new Post({ content, owner: userId })
+      console.log(req.body.content, req.body.owner)
 
-    const savedPost = await newPost.save()
-    res.json(savedPost)
-  } catch (error) {
-    console.error(error)
-    return res.json({ success: false, msg: "Error creating post" })
+      const newPost = new Post({ content, owner: userId })
+
+      const savedPost = await newPost.save()
+      res.json(savedPost)
+    } catch (error) {
+      console.error(error)
+      return res.json({ success: false, msg: "Error creating post" })
+    }
   }
-})
+)
 
 // Get all posts
 router.get("/", async (req, res) => {

@@ -7,6 +7,7 @@ const postSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
+  timestamp: { type: Date, default: Date.now },
 })
 
 const Post = mongoose.model("Post", postSchema)
