@@ -9,7 +9,7 @@ The Project has been tested and run on node v18.18.2 (64-bit) and node v20.10.0 
 1. **Download the Repository:**
    - Clone this repository to your local machine using the following command:
      ```bash
-     git clone https://github.com/EricLUT20/Full-stack-Course-Project.git
+     git clone https://github.com/EricLUT20/Full-stack-Course.git
      ```
    - Alternatively, download the ZIP file and extract it.
 
