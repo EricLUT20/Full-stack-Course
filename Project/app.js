@@ -7,7 +7,9 @@ const mongoose = require("mongoose")
 const config = require("./config/database")
 
 //Connecting to config.db
-mongoose.connect(config.database)
+mongoose.connect(config.database, {
+  family: 4,
+})
 
 //Connected databse
 mongoose.connection.on("connected", () => {
